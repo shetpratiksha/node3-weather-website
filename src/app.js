@@ -3,6 +3,7 @@ const path = require('path');
 const hbs = require('hbs');
 
 const app = express();
+const port = process.env.PORT || 3000
 
 const request = require('request');
 const geocode = require('../src/utils/geocode');
@@ -106,6 +107,6 @@ app.get('*', (req, res) =>{
     })
 })
 
-app.listen('3000',()=>{
-    console.log('listemimg port 3000');
+app.listen(port ,()=>{
+    console.log('listenimg port '+port);
 })
